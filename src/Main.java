@@ -41,7 +41,7 @@ public class Main {
 
         Optional<Integer> min = students.stream().map(Student::age).min(Integer::compare);
 
-        System.out.println("number of students with age <=25 is: " + students.stream().filter(student -> student.age()<=25 ).count());
+        System.out.println("number of students with age <=25 are: " + students.stream().filter(student -> student.age()<=25 ).count());
 
         Map<Character, List<String>> collected = students.stream().map(student -> student.name()).collect(Collectors.groupingBy(name -> name.charAt(0)));
         System.out.println(collected);
